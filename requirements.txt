@@ -1,0 +1,8 @@
+
+fastapi
+uvicorn
+pandas
+spacy
+streamlit
+requests
+sqlite3
