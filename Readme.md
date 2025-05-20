@@ -11,6 +11,7 @@ Un projet complet de chatbot intelligent capable de répondre à des questions e
 - 🧠 Détection d’intentions via mots-clés + modèle Machine Learning (LogisticRegression)
 - 🧾 Extraction intelligente de noms de joueurs et de ligues avec spaCy
 - 🗄️ Connexion à une base de données SQLite
+-    mise a jour des buts et passes decisive via la ch at
 - ➕ ➖ ✏️ Ajout / Suppression / Modification de joueurs via API
 
 ---
