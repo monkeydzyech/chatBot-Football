@@ -42,12 +42,12 @@ def find_closest_player(fragment: str, all_players: list[str]) -> str:
     return matches[0] if matches else ""
 
 ligue_aliases = {
-        "ligue 1": ["ligue 1", "league 1", "france", "championnat de france"],
-        "premier league": ["premier league", "angleterre", "epl", "championnat anglais"],
-        "bundesliga": ["bundesliga", "allemagne", "championnat allemand"],
-        "la liga": ["la liga", "liga", "espagne", "championnat espagnol", "ligue a"],
-        "serie a": ["serie a", "série a", "italie", "championnat italien"]
-    }
+    "ligue 1": ["ligue 1", "league 1", "france", "championnat de france","championnat français"],
+    "premier league": ["premier league", "angleterre", "epl", "championnat anglais"],
+    "bundesliga": ["bundesliga", "allemagne", "championnat allemand"],
+    "la liga": ["la liga", "liga", "espagne", "championnat espagnol", "ligue a"],
+    "serie a": ["serie a", "série a", "italie", "championnat italien"]
+}
 
 def extract_league(text: str) -> str:
     text = text.lower()
@@ -55,5 +55,12 @@ def extract_league(text: str) -> str:
         for alias in aliases:
             if alias in text:
                 return league
+    return ""
 
+def extract_stat_type(text: str) -> str:
+    text = text.lower()
+    if "but" in text or "goal" in text:
+        return "goals"
+    if "passe" in text or "assist" in text or "caviar" in text:
+        return "assists"
     return ""
